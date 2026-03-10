@@ -1,21 +1,31 @@
 import { supabase } from "../lib/supabaseclient";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import { useAuth } from "../context/authcontext";
 
 function Navbar() {
-  const handleLogout = () => {
-    console.log("LOGOUT CLICK");
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { user } = useAuth();
 
-    supabase.auth.signOut({ scope: "local" });
-
-    console.log("SIGNED OUT");
-
-    window.location.href = "/login";
+  const handleLogout = async () => {
+    await supabase.auth.signOut();
+    window.location.href = "/";
   };
+
+  const hideLogout =
+    location.pathname === "/login" || location.pathname === "/signup";
 
   return (
     <nav style={{ padding: "20px", borderBottom: "1px solid #eee" }}>
-      <h2>CoreStack</h2>
-      <button onClick={handleLogout}>Logout</button>
+      <h2 style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
+        CoreStack
+      </h2>
+
+      {!hideLogout && user && (
+        <button onClick={handleLogout}>
+          Logout
+        </button>
+      )}
     </nav>
   );
 }

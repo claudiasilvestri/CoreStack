@@ -21,7 +21,7 @@ function App() {
         <Route
           path="/dashboard/dev"
           element={
-            <ProtectedRoute allowedRole="developer">
+            <ProtectedRoute>
               <DashboardDev />
             </ProtectedRoute>
           }
@@ -30,7 +30,7 @@ function App() {
         <Route
           path="/dashboard/startup"
           element={
-            <ProtectedRoute allowedRole="startup">
+            <ProtectedRoute>
               <DashboardStartup />
             </ProtectedRoute>
           }

@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authcontext";
+
 import Hero from "../components/hero";
 import HiringSection from "../components/hiringsection";
 import DeveloperSection from "../components/developersection";
@@ -14,7 +15,7 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!user || !role) return;
+    if (!user) return;
 
     if (role === "developer") {
       navigate("/dashboard/dev", { replace: true });
@@ -27,7 +28,6 @@ function Home() {
 
   return (
     <>
-
       <Hero />
 
       <HiringSection />

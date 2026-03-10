@@ -7,47 +7,37 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError(null);
-    setLoading(true);
 
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
+    console.log("LOGIN START");
+
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
     });
 
+    console.log("LOGIN RESULT:", data, error);
+
     if (error) {
-      setError(error.message);
-      setLoading(false);
+      alert(error.message);
       return;
     }
 
-    navigate("/", { replace: true });
+    navigate("/dashboard/dev", { replace: true });
   };
 
   return (
     <div style={{ padding: "40px" }}>
       <h1>Login</h1>
 
-      <form
-        onSubmit={handleLogin}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "12px",
-          maxWidth: "300px",
-        }}
-      >
+      <form onSubmit={handleLogin}>
         <input
           type="email"
           placeholder="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          required
         />
 
         <input
@@ -55,14 +45,11 @@ function Login() {
           placeholder="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
 
-        <button type="submit" disabled={loading}>
-          {loading ? "Logging in..." : "Login"}
+        <button type="submit">
+          Login
         </button>
-
-        {error && <p style={{ color: "red" }}>{error}</p>}
       </form>
     </div>
   );

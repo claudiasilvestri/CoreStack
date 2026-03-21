@@ -16,16 +16,18 @@ function Navbar() {
     location.pathname === "/login" || location.pathname === "/signup";
 
   return (
-    <nav style={{ padding: "20px", borderBottom: "1px solid #eee" }}>
-      <h2 style={{ cursor: "pointer" }} onClick={() => navigate("/")}>
-        CoreStack
-      </h2>
+    <nav>
+      <div className="container nav-inner">
+        <h2 className="nav-logo" onClick={() => navigate("/")}>
+          CoreStack
+        </h2>
 
-      {!hideLogout && user && (
-        <button onClick={handleLogout}>
-          Logout
-        </button>
-      )}
+        {!hideLogout && user && (
+          <button className="btn-secondary" onClick={handleLogout}>
+            Logout
+          </button>
+        )}
+      </div>
     </nav>
   );
 }

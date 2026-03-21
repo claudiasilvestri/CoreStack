@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabaseclient";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import "../layout/auth.css";
 
 function Login() {
   const navigate = useNavigate();
@@ -11,14 +12,10 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
 
-    console.log("LOGIN START");
-
     const { data, error } = await supabase.auth.signInWithPassword({
-      email: email,
-      password: password,
+      email,
+      password,
     });
-
-    console.log("LOGIN RESULT:", data, error);
 
     if (error) {
       alert(error.message);
@@ -29,28 +26,37 @@ function Login() {
   };
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>Login</h1>
+    <div className="auth-container">
+      <div className="auth-card">
+        <h1>Login</h1>
 
-      <form onSubmit={handleLogin}>
-        <input
-          type="email"
-          placeholder="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
+        <form onSubmit={handleLogin}>
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-        <button type="submit">
-          Login
-        </button>
-      </form>
+          <button type="submit">Login</button>
+        </form>
+
+        <div className="auth-link">
+          Don't have an account?{" "}
+          <Link to="/signup">Sign up</Link>
+        </div>
+      </div>
     </div>
   );
 }

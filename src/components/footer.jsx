@@ -3,7 +3,7 @@ function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <h3>CoreStack</h3>
+          <h3 className="highlight-title">CoreStack</h3>
           <p>Prima le competenze, poi il profilo.</p>
         </div>
 

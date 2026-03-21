@@ -3,11 +3,11 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authcontext";
 
 import Hero from "../components/hero";
-import HiringSection from "../components/hiringsection";
-import DeveloperSection from "../components/developersection";
-import HowItWorks from "../components/howitworks";
-import DiversitySection from "../components/whydifferent";
-import FinalCTA from "../components/finalcta";
+import ForCompanies from "../components/ForCompanies";
+import ForDevelopers from "../components/ForDevelopers";
+import ProcessSection from "../components/ProcessSection";
+import SolutionSection from "../components/SolutionSection";
+import CTASection from "../components/CTASection";
 import Footer from "../components/footer";
 
 function Home() {
@@ -30,15 +30,15 @@ function Home() {
     <>
       <Hero />
 
-      <HiringSection />
+      <ForCompanies />
 
-      <DeveloperSection />
+      <ForDevelopers />
 
-      <HowItWorks />
+      <ProcessSection />
 
-      <DiversitySection />
+      <SolutionSection />
 
-      <FinalCTA />
+      <CTASection />
 
       <Footer />
     </>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabaseclient";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import "../layout/auth.css";
 
 function Signup() {
   const navigate = useNavigate();
@@ -27,15 +28,13 @@ function Signup() {
 
       const userId = data?.user?.id;
 
-      if (!userId) {
-        throw new Error("User not created");
-      }
+      if (!userId) throw new Error("User not created");
 
       const { error: profileError } = await supabase
         .from("profiles")
         .insert({
           id: userId,
-          role: role,
+          role,
         });
 
       if (profileError) throw profileError;
@@ -57,62 +56,63 @@ function Signup() {
   };
 
   return (
-    <div style={{ padding: "40px" }}>
-      <h1>Signup</h1>
+    <div className="auth-container">
+      <div className="auth-card">
+        <h1>Signup</h1>
 
-      <form
-        onSubmit={handleSignup}
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: "12px",
-          maxWidth: "300px",
-        }}
-      >
-        <input
-          type="email"
-          placeholder="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
+        <form onSubmit={handleSignup}>
+          <label>Email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
 
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
+          <label>Password</label>
+          <input
+            type="password"
+            placeholder="Create a password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
 
-        <div>
-          <label>
-            <input
-              type="radio"
-              value="developer"
-              checked={role === "developer"}
-              onChange={(e) => setRole(e.target.value)}
-            />
-            Developer
-          </label>
+          <div className="role-select">
+            <label>
+              <input
+                type="radio"
+                value="developer"
+                checked={role === "developer"}
+                onChange={(e) => setRole(e.target.value)}
+              />
+              Developer
+            </label>
 
-          <label style={{ marginLeft: "16px" }}>
-            <input
-              type="radio"
-              value="startup"
-              checked={role === "startup"}
-              onChange={(e) => setRole(e.target.value)}
-            />
-            Startup
-          </label>
+            <label>
+              <input
+                type="radio"
+                value="startup"
+                checked={role === "startup"}
+                onChange={(e) => setRole(e.target.value)}
+              />
+              Startup
+            </label>
+          </div>
+
+          <button type="submit" disabled={loading}>
+            {loading ? "Creating..." : "Create account"}
+          </button>
+
+          {error && <p style={{ color: "red" }}>{error}</p>}
+        </form>
+
+        <div className="auth-link">
+          Already registered?{" "}
+          <Link to="/login">Login</Link>
         </div>
-
-        <button type="submit" disabled={loading}>
-          {loading ? "Creating..." : "Create account"}
-        </button>
-
-        {error && <p style={{ color: "red" }}>{error}</p>}
-      </form>
+      </div>
     </div>
   );
 }

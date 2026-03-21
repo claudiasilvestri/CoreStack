@@ -1,8 +1,8 @@
-function HiringSection() {
+function ForCompanies() {
   return (
     <section className="section">
-      <div className="container">
-        <div className="block">
+      <div className="container section-center">
+        <div className="section-content">
           <h2>Assumere frontend junior non dovrebbe essere un salto nel buio.</h2>
 
           <p className="section-sub">
@@ -12,16 +12,20 @@ function HiringSection() {
           <p className="section-def">
             CoreStack introduce uno standard tecnico condiviso prima del colloquio.
           </p>
+        </div>
 
-          <ul className="feature-list">
-            <li>Step tecnico comparabile</li>
-            <li>Segnale prima del CV</li>
-            <li>Processo iniziale più strutturato</li>
-          </ul>
+        <div className="cards-grid">
+          <div className="card">
+            <ul>
+              <li>Step tecnico comparabile</li>
+              <li>Segnale prima del CV</li>
+              <li>Processo iniziale più strutturato</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-export default HiringSection;
+export default ForCompanies;

@@ -1,4 +1,4 @@
-function HowItWorks() {
+function ProcessSection() {
   return (
     <section className="section">
       <div className="container">
@@ -25,4 +25,4 @@ function HowItWorks() {
   );
 }
 
-export default HowItWorks;
+export default ProcessSection;

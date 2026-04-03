@@ -12,7 +12,7 @@ function CTASection() {
           <h2>Inizia da qui.</h2>
 
           <p className="section-sub">
-            Un primo step tecnico condiviso tra frontend junior e chi sta assumendo.
+            Uno step tecnico iniziale, condiviso tra frontend developer e aziende.
           </p>
 
           <div className="cta-buttons">

@@ -5,6 +5,7 @@ import Signup from "./pages/signup";
 import Login from "./pages/login";
 import DashboardDev from "./pages/dashboard-dev";
 import DashboardStartup from "./pages/dashboard-startup";
+import PublicProfile from "./pages/publicprofile";
 import ProtectedRoute from "./components/protectedroute";
 
 function App() {
@@ -35,6 +36,8 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        <Route path="/profile" element={<PublicProfile />} />
       </Routes>
     </>
   );

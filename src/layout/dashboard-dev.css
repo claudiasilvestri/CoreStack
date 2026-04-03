@@ -1,0 +1,70 @@
+.dashboard-dev {
+  padding: var(--space-2xl) 0;
+}
+
+.dashboard-container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.dashboard-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+}
+
+.dashboard-card h2 {
+  margin-bottom: var(--space-md);
+}
+
+.dashboard-card p {
+  margin-bottom: 10px;
+}
+
+.profile-tags {
+  display: flex;
+  gap: var(--space-sm);
+  margin: var(--space-md) 0;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #f1f5f9;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.profile-status {
+  display: inline-block;
+  margin-top: var(--space-md);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  background: #f3e8ff;
+  color: var(--primary);
+}
+
+.challenge-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-md);
+}
+
+.challenge-status {
+  font-size: 14px;
+  color: var(--primary);
+}
+
+.score {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: var(--space-sm);
+}

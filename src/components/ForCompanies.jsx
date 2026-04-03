@@ -3,23 +3,23 @@ function ForCompanies() {
     <section className="section">
       <div className="container section-center">
         <div className="section-content">
-          <h2>Assumere frontend junior non dovrebbe essere un salto nel buio.</h2>
+          <h2>Per le aziende</h2>
 
           <p className="section-sub">
-            Il primo filtro è spesso il CV, mentre il segnale tecnico arriva troppo tardi nel processo.
+            Tutti partono dallo stesso punto.
           </p>
 
           <p className="section-def">
-            CoreStack introduce uno standard tecnico condiviso prima del colloquio.
+            Per le aziende significa valutare prima, ridurre i tempi di selezione e confrontare candidati in modo più chiaro.
           </p>
         </div>
 
         <div className="cards-grid">
           <div className="card">
             <ul>
-              <li>Step tecnico comparabile</li>
-              <li>Segnale prima del CV</li>
-              <li>Processo iniziale più strutturato</li>
+              <li>Valutare prima</li>
+              <li>Ridurre i tempi di selezione</li>
+              <li>Confrontare candidati in modo più chiaro</li>
             </ul>
           </div>
         </div>

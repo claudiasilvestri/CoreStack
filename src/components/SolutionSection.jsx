@@ -7,8 +7,8 @@ function SolutionSection() {
           <h2>Un nuovo punto di partenza.</h2>
 
           <p className="section-sub">
-            CoreStack introduce uno step tecnico iniziale, standardizzato e anonimo.
-            Le competenze diventano il primo segnale, non l’ultimo.
+            CoreStack sposta il primo step sulle competenze, attraverso una challenge tecnica e realistica.
+            Le aziende vedono prima il risultato, e solo dopo il CV.
           </p>
         </div>
 
@@ -17,21 +17,21 @@ function SolutionSection() {
           <div className="solution-point">
             <h3>Competenze prima del profilo</h3>
             <p>
-              Il segnale tecnico arriva subito, prima di CV, background o percezioni.
+              CoreStack sposta il primo step sulle competenze.
             </p>
           </div>
 
           <div className="solution-point">
-            <h3>Anonimato</h3>
+            <h3>Step tecnico iniziale</h3>
             <p>
-              Il primo step avviene senza identità visiva, riducendo bias e influenze esterne.
+              Attraverso una challenge tecnica e realistica.
             </p>
           </div>
 
           <div className="solution-point">
-            <h3>Standard condiviso</h3>
+            <h3>Risultato prima del CV</h3>
             <p>
-              Uno step tecnico comparabile tra candidati e aziende, chiaro fin dall’inizio.
+              Le aziende vedono prima il risultato, e solo dopo il CV.
             </p>
           </div>
 

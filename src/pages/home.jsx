@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authcontext";
 
 import Hero from "../components/hero";
+import ProblemSection from "../components/ProblemSection";
 import ForCompanies from "../components/ForCompanies";
 import ForDevelopers from "../components/ForDevelopers";
 import ProcessSection from "../components/ProcessSection";
@@ -29,6 +30,8 @@ function Home() {
   return (
     <>
       <Hero />
+
+      <ProblemSection />
 
       <ForCompanies />
 

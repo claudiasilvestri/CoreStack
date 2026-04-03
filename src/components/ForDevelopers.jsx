@@ -1,25 +1,25 @@
-function  ForDevelopers() {
+function ForDevelopers() {
   return (
     <section className="section">
       <div className="container section-center">
         <div className="section-content">
-          <h2>Essere valutati dal CV non dovrebbe essere il primo passo.</h2>
+          <h2>Per i developer</h2>
 
           <p className="section-sub">
-            Le competenze tecniche entrano nel processo quando gran parte delle decisioni è già stata presa.
+            Tutti partono dallo stesso punto.
           </p>
 
           <p className="section-def">
-            CoreStack ribalta l’ordine, mettendo le competenze al centro.
+            Per i developer significa essere valutati per ciò che sanno fare.
           </p>
         </div>
 
         <div className="cards-grid">
           <div className="card">
             <ul>
-              <li>Profilo inizialmente anonimo</li>
-              <li>GitHub e progetti al centro</li>
-              <li>Step tecnico chiaro e condiviso</li>
+              <li>Essere valutati per le competenze</li>
+              <li>Non partire dal CV</li>
+              <li>Stesso punto di partenza per tutti</li>
             </ul>
           </div>
         </div>

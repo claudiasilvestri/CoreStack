@@ -37,7 +37,7 @@ function App() {
           }
         />
 
-        <Route path="/profile" element={<PublicProfile />} />
+        <Route path="/profile/:id" element={<PublicProfile />} />
       </Routes>
     </>
   );

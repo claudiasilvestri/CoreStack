@@ -14,8 +14,9 @@ function Hero() {
         </div>
 
         <div className="cta-buttons">
-          <button className="btn-primary">Inizia la challenge</button>
-          <button className="btn-secondary">Scopri di più</button>
+          <button className="btn-primary">
+            Scopri come funziona
+          </button>
         </div>
 
       </div>

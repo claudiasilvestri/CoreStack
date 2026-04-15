@@ -9,7 +9,7 @@ function Navbar() {
 
   const handleLogout = async () => {
     await supabase.auth.signOut();
-    window.location.href = "/";
+    navigate("/");
   };
 
   const hideLogout =
@@ -23,7 +23,7 @@ function Navbar() {
         </h2>
 
         <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-          <Link to="/browse">browse</Link>
+          <Link to="/developers">Developers</Link>
 
           {!hideLogout && user && (
             <button className="btn-secondary" onClick={handleLogout}>

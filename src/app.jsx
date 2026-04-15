@@ -7,6 +7,7 @@ import DashboardDev from "./pages/dashboard-dev";
 import DashboardStartup from "./pages/dashboard-startup";
 import PublicProfile from "./pages/publicprofile";
 import ProtectedRoute from "./components/protectedroute";
+import Browse from "./pages/browse"
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
         />
 
         <Route path="/profile/:id" element={<PublicProfile />} />
+
+       <Route path="/browse" element={<Browse />} />
       </Routes>
     </>
   );

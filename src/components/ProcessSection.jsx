@@ -6,22 +6,24 @@ function ProcessSection() {
 
         <div className="steps">
           <div className="step">
-            <h3>1. Creazione profilo</h3>
-            <p>Il developer accede con GitHub.</p>
-            <p>Seleziona un progetto rappresentativo.</p>
-            <p>Il profilo è costruito sulle competenze tecniche.</p>
+            <h3>1. Seleziona un progetto</h3>
+            <p>
+              Seleziona da GitHub il progetto da includere nel tuo profilo tecnico.
+            </p>
           </div>
 
           <div className="step">
-            <h3>2. Step tecnico</h3>
-            <p>Completa una challenge standardizzata.</p>
-            <p>Il risultato è visibile alle aziende.</p>
+            <h3>2. Completa la challenge</h3>
+            <p>
+              Completa una challenge tecnica pensata per valutare il tuo approccio.
+            </p>
           </div>
 
           <div className="step">
-            <h3>3. Match</h3>
-            <p>Dopo lo step tecnico, l’azienda sblocca il profilo.</p>
-            <p>Il contatto avviene solo dopo.</p>
+            <h3>3. Entra nel matching</h3>
+            <p>
+              Le aziende vedono risultati e competenze, mentre il profilo resta anonimo fino allo sblocco.
+            </p>
           </div>
         </div>
       </div>

@@ -1,3 +1,7 @@
+/* =========================
+   HERO
+========================= */
+
 .hero {
   padding: 140px 0 100px;
 }
@@ -9,7 +13,7 @@
 .hero h1 {
   font-size: 50px;
   font-weight: 600;
-  color: #1e293b;
+  color: var(--text);
 }
 
 .hero p {
@@ -25,38 +29,69 @@
   margin-top: 32px;
   display: flex;
   gap: 16px;
+  flex-wrap: wrap;
 }
+
+
+/* =========================
+   SECTION VARIANT
+========================= */
 
 .section-alt {
   background: linear-gradient(to bottom, #ffffff, #f3f4f6);
 }
 
-.solution-points {
+
+/* =========================
+   PROBLEM
+========================= */
+
+.problem-text {
   margin-top: 40px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
+  max-width: 700px;
 }
 
-.solution-point {
-  max-width: 600px;
-  text-align: left;
+.problem-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
 }
 
-.solution-point h3 {
-  color: var(--primary);
-  margin-bottom: 6px;
+/* =========================
+   SOLUTION
+========================= */
+
+.solution-text {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
 }
+
+.solution-text p {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--muted);
+}
+
+/* =========================
+   PROCESS
+========================= */
 
 .steps {
   display: grid;
-  gap: 24px;
+  gap: 20px;
   margin-top: 40px;
 }
 
 .step {
-  padding: 20px 0;
+  padding: 24px 0;
   border-bottom: 1px solid var(--border);
+  max-width: 700px;
 }
 
 .step:last-child {
@@ -64,17 +99,80 @@
 }
 
 .step h3 {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text);
 }
+
+.step p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* =========================
+   AUDIENCE SECTION
+========================= */
+
+.audience-grid {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.audience-column {
+  padding: 28px;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  text-align: left;
+}
+
+.audience-column h3 {
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.audience-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.audience-column li {
+  margin-bottom: 14px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+/* =========================
+   CTA
+========================= */
 
 .cta-section {
   text-align: center;
 }
 
-.cta-buttons {
-  margin-top: 32px;
-  display: flex;
+.cta-section .cta-buttons {
   justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .audience-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
 }

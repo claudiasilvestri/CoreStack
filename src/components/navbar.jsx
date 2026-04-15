@@ -1,5 +1,5 @@
 import { supabase } from "../lib/supabaseclient";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import { useAuth } from "../context/authcontext";
 
 function Navbar() {
@@ -22,11 +22,15 @@ function Navbar() {
           CoreStack
         </h2>
 
-        {!hideLogout && user && (
-          <button className="btn-secondary" onClick={handleLogout}>
-            Logout
-          </button>
-        )}
+        <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
+          <Link to="/browse">browse</Link>
+
+          {!hideLogout && user && (
+            <button className="btn-secondary" onClick={handleLogout}>
+              Logout
+            </button>
+          )}
+        </div>
       </div>
     </nav>
   );

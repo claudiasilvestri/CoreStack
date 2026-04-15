@@ -4,36 +4,21 @@ function ProblemSection() {
       <div className="container">
 
         <div className="section-content">
-          <h2>Il processo di selezione parte dal CV, mentre il segnale tecnico arriva dopo.</h2>
+          <h2>
+            Il processo di selezione parte dal CV, mentre le competenze emergono solo dopo.
+          </h2>
 
           <p className="section-sub">
-            Questo rende difficile confrontare i candidati e allunga il processo.
+            Questo rende più difficile confrontare i candidati, rallenta le decisioni e aumenta l’incertezza.
           </p>
         </div>
 
-        <div className="solution-points">
+        <div className="problem-text">
+          <p>Ogni profilo viene valutato con segnali iniziali poco uniformi.</p>
 
-          <div className="solution-point">
-            <h3>Difficile confrontare i candidati</h3>
-            <p>
-              Il processo parte dal CV, mentre il segnale tecnico arriva dopo.
-            </p>
-          </div>
+          <p>Le aziende hanno pochi elementi concreti per valutare davvero i candidati.</p>
 
-          <div className="solution-point">
-            <h3>Il segnale tecnico arriva dopo</h3>
-            <p>
-              Quando si guarda davvero cosa una persona sa fare, il processo è già avanzato.
-            </p>
-          </div>
-
-          <div className="solution-point">
-            <h3>Il processo si allunga</h3>
-            <p>
-              Questo rende difficile confrontare i candidati e allunga il processo.
-            </p>
-          </div>
-
+          <p>Le competenze emergono solo nelle fasi più avanzate della selezione.</p>
         </div>
 
       </div>

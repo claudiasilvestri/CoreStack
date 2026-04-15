@@ -4,8 +4,7 @@ import { useAuth } from "../context/authcontext";
 
 import Hero from "../components/hero";
 import ProblemSection from "../components/ProblemSection";
-import ForCompanies from "../components/ForCompanies";
-import ForDevelopers from "../components/ForDevelopers";
+import AudienceSection from "../components/AudienceSection";
 import ProcessSection from "../components/ProcessSection";
 import SolutionSection from "../components/SolutionSection";
 import CTASection from "../components/CTASection";
@@ -33,9 +32,7 @@ function Home() {
 
       <ProblemSection />
 
-      <ForCompanies />
-
-      <ForDevelopers />
+      <AudienceSection />
 
       <ProcessSection />
 

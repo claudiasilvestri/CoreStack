@@ -9,7 +9,7 @@ function Hero() {
           </h1>
 
           <p>
-            Uno step tecnico iniziale, condiviso tra frontend developer e aziende.
+            Una challenge tecnica costruita sulle competenze richieste dal mercato.
           </p>
         </div>
 

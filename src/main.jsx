@@ -3,9 +3,9 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { AuthProvider } from "./context/authcontext";
 import App from "./app";
-import './layout/global.css'
-import './layout/auth.css'
-import './layout/home.css'
+import './styles/global.css'
+import './styles/auth.css'
+import './styles/home.css'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>

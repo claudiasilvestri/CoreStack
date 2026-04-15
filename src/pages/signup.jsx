@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { supabase } from "../lib/supabaseclient";
 import { useNavigate, Link } from "react-router-dom";
-import "../layout/auth.css";
+import "../styles/auth.css";
 
 function Signup() {
   const navigate = useNavigate();

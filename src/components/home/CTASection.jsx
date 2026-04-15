@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/authcontext";
+import { useAuth } from "../../context/authcontext";
 
 function CTASection() {
   const navigate = useNavigate();

@@ -1,13 +1,14 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../context/authcontext";
+import { useAuth } from "../context/AuthContext";
 
-import Hero from "../components/Hero";
-import ProblemSection from "../components/ProblemSection";
-import AudienceSection from "../components/AudienceSection";
-import ProcessSection from "../components/ProcessSection";
-import SolutionSection from "../components/SolutionSection";
-import CTASection from "../components/CTASection";
+import Hero from "../components/home/Hero";
+import ProblemSection from "../components/home/ProblemSection";
+import SolutionSection from "../components/home/SolutionSection";
+import ProcessSection from "../components/home/ProcessSection";
+import AudienceSection from "../components/home/AudienceSection";
+import CTASection from "../components/home/CTASection";
+
 import Footer from "../components/Footer";
 
 function Home() {
@@ -32,11 +33,11 @@ function Home() {
 
       <ProblemSection />
 
-      <AudienceSection />
+      <SolutionSection />
 
       <ProcessSection />
 
-      <SolutionSection />
+      <AudienceSection />
 
       <CTASection />
 

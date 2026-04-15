@@ -1,13 +1,16 @@
 import { Routes, Route } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
+
 import Home from "./pages/Home";
 import Signup from "./pages/SignUp";
 import Login from "./pages/Login";
 import DashboardDev from "./pages/DashboardDev";
 import DashboardStartup from "./pages/DashboardStartup";
+import DeveloperDirectory from "./pages/DeveloperDirectory";
 import PublicProfile from "./pages/PublicProfile";
+
 import ProtectedRoute from "./components/ProtectedRoute";
-import Browse from "./pages/Browse"
 
 function App() {
   return (
@@ -38,9 +41,9 @@ function App() {
           }
         />
 
-        <Route path="/profile/:id" element={<PublicProfile />} />
+        <Route path="/developers" element={<DeveloperDirectory />} />
 
-       <Route path="/browse" element={<Browse />} />
+        <Route path="/developers/:id" element={<PublicProfile />} />
       </Routes>
     </>
   );

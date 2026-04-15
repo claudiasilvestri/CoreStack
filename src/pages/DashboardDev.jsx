@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { getProfile, updateProfile } from "../services/profileService"
 import StackSelector from "../components/StackSelector"
-import "../layout/dashboard-dev.css"
+import "../styles/dashboard-dev.css"
 
 const FOCUS_OPTIONS = [
   "UI / Frontend",

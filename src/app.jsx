@@ -1,13 +1,13 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/navbar";
-import Home from "./pages/home";
-import Signup from "./pages/signup";
-import Login from "./pages/login";
-import DashboardDev from "./pages/dashboard-dev";
-import DashboardStartup from "./pages/dashboard-startup";
-import PublicProfile from "./pages/publicprofile";
-import ProtectedRoute from "./components/protectedroute";
-import Browse from "./pages/browse"
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Signup from "./pages/SignUp";
+import Login from "./pages/Login";
+import DashboardDev from "./pages/DashboardDev";
+import DashboardStartup from "./pages/DashboardStartup";
+import PublicProfile from "./pages/PublicProfile";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Browse from "./pages/Browse"
 
 function App() {
   return (

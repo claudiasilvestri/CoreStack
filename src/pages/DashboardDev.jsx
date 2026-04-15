@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getProfile, updateProfile } from "../services/profiles"
+import { getProfile, updateProfile } from "../services/profileService"
 import StackSelector from "../components/StackSelector"
 import "../layout/dashboard-dev.css"
 

@@ -9,10 +9,10 @@ function CTASection() {
     <section className="section">
       <div className="container">
         <div className="card section-content section-center cta-box">
-          <h2>Pronto a metterti alla prova?</h2>
+          <h2>Entra nel sistema di valutazione.</h2>
 
           <p className="section-sub">
-            Affronta una challenge tecnica costruita sulle competenze richieste dal mercato.
+            Richiedi accesso per valutare o essere valutato sulle competenze reali.
           </p>
 
           <div className="cta-buttons">
@@ -21,7 +21,7 @@ function CTASection() {
                 className="btn-primary"
                 onClick={() => navigate("/signup")}
               >
-                Crea il tuo profilo
+                Richiedi accesso
               </button>
             ) : (
               <button
@@ -34,7 +34,7 @@ function CTASection() {
                   )
                 }
               >
-                Vai alla dashboard
+                Accedi al tuo spazio
               </button>
             )}
           </div>

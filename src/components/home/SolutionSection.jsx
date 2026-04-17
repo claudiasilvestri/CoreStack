@@ -5,20 +5,20 @@ function SolutionSection() {
 
         <div className="section-content">
           <h2>
-            CoreStack introduce la valutazione tecnica fin dall’inizio.
+            CoreStack cambia l’ordine della valutazione.
           </h2>
 
           <p className="section-sub">
-            Una challenge costruita per valutare le competenze prima ancora del profilo.
+            La valutazione tecnica diventa il primo segnale, non l’ultimo.
           </p>
         </div>
 
         <div className="solution-text">
-          <p>La valutazione parte da ciò che un developer sa fare.</p>
+          <p>Il processo parte dalle competenze, non dal profilo.</p>
 
-          <p>Ogni candidato affronta la stessa challenge.</p>
+          <p>Tutti i candidati vengono valutati con lo stesso criterio.</p>
 
-          <p>Le aziende vedono il risultato prima del CV.</p>
+          <p>Solo dopo la valutazione, il profilo diventa visibile.</p>
         </div>
 
       </div>

@@ -9,26 +9,26 @@ function Hero() {
           </h1>
 
           <p>
-            Una challenge tecnica costruita sulle competenze richieste dal mercato.
+            Un sistema di valutazione tecnica che permette di confrontare i developer su basi reali, prima del CV.
           </p>
 
           <div className="cta-buttons">
             <button className="btn-primary">
-              Scopri come funziona
+              Richiedi accesso
             </button>
           </div>
         </div>
 
         <div className="hero-visual">
           <div className="hero-card">
-            <span className="hero-badge">CHALLENGE TECNICA</span>
+            <span className="hero-badge">VALUTAZIONE TECNICA</span>
 
-            <h3>Screening Developer</h3>
+            <h3>Profilo anonimo</h3>
 
             <div className="hero-tasks">
-              <p>✓ Responsive Layout</p>
-              <p>✓ Component Logic</p>
-              <p>○ API Integration</p>
+              <p>✓ Codice</p>
+              <p>✓ UX</p>
+              <p>✓ Decision making</p>
             </div>
 
             <div className="hero-progress">

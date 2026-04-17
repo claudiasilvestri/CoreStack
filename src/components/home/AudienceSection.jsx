@@ -4,10 +4,10 @@ function AudienceSection() {
       <div className="container section-center">
 
         <div className="section-content">
-          <h2>Una valutazione più chiara per tutti.</h2>
+          <h2>Stesso punto di partenza, per tutti.</h2>
 
           <p className="section-sub">
-            Tutti partono dallo stesso punto, con un criterio comune di valutazione.
+            Ogni candidato viene valutato sul lavoro reale, prima che il profilo entri in gioco.
           </p>
         </div>
 
@@ -17,9 +17,9 @@ function AudienceSection() {
             <h3>Per le aziende</h3>
 
             <ul>
-              <li>Competenze visibili fin da subito</li>
-              <li>Confronto più chiaro</li>
-              <li>Tempi di selezione ridotti</li>
+              <li>Vedono le competenze fin dall’inizio</li>
+              <li>Confrontano candidati sullo stesso criterio</li>
+              <li>Riduzione del tempo di selezione</li>
             </ul>
           </div>
 
@@ -27,9 +27,9 @@ function AudienceSection() {
             <h3>Per i developer</h3>
 
             <ul>
-              <li>Competenze al centro della valutazione</li>
-              <li>Minor peso del CV iniziale</li>
-              <li>Stesso punto di partenza</li>
+              <li>Vengono valutati sul lavoro reale</li>
+              <li>Il CV non è il primo filtro</li>
+              <li>Stesso punto di partenza per tutti</li>
             </ul>
           </div>
 

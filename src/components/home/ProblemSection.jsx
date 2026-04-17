@@ -9,16 +9,16 @@ function ProblemSection() {
           </h2>
 
           <p className="section-sub">
-            Questo rende più difficile confrontare i candidati, rallenta le decisioni e aumenta l’incertezza.
+            La valutazione tecnica arriva troppo tardi, quando le prime decisioni sono già state prese.
           </p>
         </div>
 
         <div className="problem-text">
-          <p>Ogni profilo viene valutato con segnali iniziali poco uniformi.</p>
+          <p>I candidati vengono filtrati su segnali iniziali poco affidabili e difficili da confrontare.</p>
 
-          <p>Le aziende hanno pochi elementi concreti per valutare davvero i candidati.</p>
+          <p>Le aziende prendono decisioni senza vedere come un developer lavora davvero.</p>
 
-          <p>Le competenze emergono solo nelle fasi più avanzate della selezione.</p>
+          <p>Il segnale tecnico arriva solo nelle fasi finali, quando gran parte del processo è già definita.</p>
         </div>
 
       </div>

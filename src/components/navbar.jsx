@@ -1,35 +1,59 @@
+import { Link, useNavigate } from "react-router-dom";
 import { supabase } from "../lib/supabaseclient";
-import { useNavigate, useLocation, Link } from "react-router-dom";
-import { useAuth } from "../context/authcontext";
+import { useAuth } from "../context/AuthContext";
 
 function Navbar() {
   const navigate = useNavigate();
-  const location = useLocation();
-  const { user } = useAuth();
+  const { user, role } = useAuth();
 
   const handleLogout = async () => {
-    await supabase.auth.signOut();
-    navigate("/");
-  };
+    console.log("🚪 LOGOUT CLICK");
 
-  const hideLogout =
-    location.pathname === "/login" || location.pathname === "/signup";
+    await supabase.auth.signOut();
+
+    console.log("✅ LOGGED OUT");
+
+    navigate("/login");
+  };
 
   return (
     <nav>
-      <div className="container nav-inner">
-        <h2 className="nav-logo" onClick={() => navigate("/")}>
-          CoreStack
-        </h2>
+      <div className="container">
+        <div className="nav-inner">
 
-        <div style={{ display: "flex", gap: "12px", alignItems: "center" }}>
-          <Link to="/developers">Developers</Link>
+          {/* LOGO */}
+          <h2
+            className="nav-logo"
+            onClick={() => {
+              console.log("🏠 GO HOME");
+              navigate("/");
+            }}
+          >
+            CoreStack
+          </h2>
 
-          {!hideLogout && user && (
-            <button className="btn-secondary" onClick={handleLogout}>
-              Logout
-            </button>
-          )}
+          <div className="nav-actions">
+
+            {!user && (
+              <>
+                <Link to="/login" className="nav-link">Login</Link>
+                <Link to="/signup" className="nav-link">Signup</Link>
+              </>
+            )}
+
+            {user && role === "startup" && (
+              <Link to="/developers" className="nav-link">
+                Developers
+              </Link>
+            )}
+
+            {user && (
+              <button className="nav-cta" onClick={handleLogout}>
+                Logout
+              </button>
+            )}
+
+          </div>
         </div>
       </div>
     </nav>

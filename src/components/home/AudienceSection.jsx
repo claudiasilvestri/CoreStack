@@ -1,9 +1,9 @@
 function AudienceSection() {
   return (
     <section className="section">
-      <div className="container section-center">
+      <div className="container">
 
-        <div className="section-content">
+        <div className="content">
           <h2>Stesso punto di partenza, per tutti.</h2>
 
           <p className="section-sub">

@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../context/authcontext";
+import { useAuth } from "../../context/AuthContext";
 
 function CTASection() {
   const navigate = useNavigate();
@@ -8,37 +8,38 @@ function CTASection() {
   return (
     <section className="section">
       <div className="container">
-        <div className="card section-content section-center cta-box">
+
+        <div className="content cta-box">
           <h2>Entra nel sistema di valutazione.</h2>
 
           <p className="section-sub">
             Richiedi accesso per valutare o essere valutato sulle competenze reali.
           </p>
 
-          <div className="cta-buttons">
-            {!user ? (
-              <button
-                className="btn-primary"
-                onClick={() => navigate("/signup")}
-              >
-                Richiedi accesso
-              </button>
-            ) : (
-              <button
-                className="btn-primary"
-                onClick={() =>
-                  navigate(
-                    role === "startup"
-                      ? "/dashboard/startup"
-                      : "/dashboard/dev"
-                  )
-                }
-              >
-                Accedi al tuo spazio
-              </button>
-            )}
-          </div>
+          {!user ? (
+            <button
+              className="btn-primary"
+              onClick={() => navigate("/signup")}
+            >
+              Richiedi accesso
+            </button>
+          ) : (
+            <button
+              className="btn-primary"
+              onClick={() =>
+                navigate(
+                  role === "startup"
+                    ? "/dashboard/startup"
+                    : "/dashboard/dev"
+                )
+              }
+            >
+              Accedi al tuo spazio
+            </button>
+          )}
+
         </div>
+
       </div>
     </section>
   );

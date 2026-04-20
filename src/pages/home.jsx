@@ -8,7 +8,6 @@ import SolutionSection from "../components/home/SolutionSection";
 import ProcessSection from "../components/home/ProcessSection";
 import AudienceSection from "../components/home/AudienceSection";
 import CTASection from "../components/home/CTASection";
-
 import Footer from "../components/Footer";
 
 function Home() {
@@ -30,17 +29,11 @@ function Home() {
   return (
     <>
       <Hero />
-
       <ProblemSection />
-
       <SolutionSection />
-
       <ProcessSection />
-
       <AudienceSection />
-
       <CTASection />
-
       <Footer />
     </>
   );

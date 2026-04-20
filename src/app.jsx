@@ -9,7 +9,6 @@ import DashboardDev from "./pages/DashboardDev";
 import DashboardStartup from "./pages/DashboardStartup";
 import DeveloperDirectory from "./pages/DeveloperDirectory";
 import PublicProfile from "./pages/PublicProfile";
-
 import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
@@ -23,25 +22,25 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
 
-        <Route
-          path="/dashboard/dev"
-          element={
-            <ProtectedRoute>
-              <DashboardDev />
-            </ProtectedRoute>
-          }
-        />
+<Route path="/dashboard/dev" element={<DashboardDev />} />
 
         <Route
           path="/dashboard/startup"
           element={
-            <ProtectedRoute>
+            <ProtectedRoute allowedRole="startup">
               <DashboardStartup />
             </ProtectedRoute>
           }
         />
 
-        <Route path="/developers" element={<DeveloperDirectory />} />
+        <Route
+          path="/developers"
+          element={
+            <ProtectedRoute allowedRole="startup">
+              <DeveloperDirectory />
+            </ProtectedRoute>
+          }
+        />
 
         <Route path="/developers/:id" element={<PublicProfile />} />
       </Routes>

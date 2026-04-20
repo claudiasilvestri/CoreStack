@@ -1,40 +1,46 @@
 function Hero() {
   return (
     <section className="section hero">
-      <div className="container hero-layout">
+      <div className="container">
 
-        <div className="hero-content">
-          <h1>
-            Prima le <span className="accent">competenze</span>, poi il profilo.
-          </h1>
+        <div className="hero-grid">
 
-          <p>
-            Un sistema di valutazione tecnica che permette di confrontare i developer su basi reali, prima del CV.
-          </p>
+          <div className="content">
+            <h1>
+              Prima le <span className="highlight">competenze</span>, poi il profilo.
+            </h1>
 
-          <div className="cta-buttons">
+            <p className="section-sub">
+              Un sistema di valutazione tecnica che permette di confrontare i developer su basi reali, prima del CV.
+            </p>
+
             <button className="btn-primary">
               Richiedi accesso
             </button>
           </div>
-        </div>
 
-        <div className="hero-visual">
-          <div className="hero-card">
-            <span className="hero-badge">VALUTAZIONE TECNICA</span>
+          <div className="hero-visual">
+            <div className="hero-card">
 
-            <h3>Profilo anonimo</h3>
+              <span className="hero-badge">
+                VALUTAZIONE TECNICA
+              </span>
 
-            <div className="hero-tasks">
-              <p>✓ Codice</p>
-              <p>✓ UX</p>
-              <p>✓ Decision making</p>
-            </div>
+              <h3>Profilo anonimo</h3>
 
-            <div className="hero-progress">
-              <div className="hero-progress-fill"></div>
+              <div className="hero-tasks">
+                <p>✓ Codice</p>
+                <p>✓ UX</p>
+                <p>✓ Decision making</p>
+              </div>
+
+              <div className="hero-progress">
+                <div className="hero-progress-fill"></div>
+              </div>
+
             </div>
           </div>
+
         </div>
 
       </div>

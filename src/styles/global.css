@@ -1,21 +1,37 @@
+/* ===================== */
+/* RESET */
+/* ===================== */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+
+/* ===================== */
+/* VARIABLES */
+/* ===================== */
+
 :root {
   --bg: #F8FAFC;
   --text: #1e293b;
-  --muted: #64748B;
+  --muted: #475569;
   --border: #E2E8F0;
 
   --primary: #a855f7;
   --primary-hover: #9333ea;
 
+  --primary-soft: rgba(168,85,247,0.06);
   --card: #ffffff;
+
   --radius: 16px;
 }
+
+
+/* ===================== */
+/* BASE */
+/* ===================== */
 
 body {
   background: linear-gradient(
@@ -28,6 +44,11 @@ body {
   line-height: 1.6;
 }
 
+
+/* ===================== */
+/* LAYOUT */
+/* ===================== */
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -38,36 +59,71 @@ body {
   padding: 100px 0;
 }
 
+.section-alt {
+  background: linear-gradient(
+    180deg,
+    #f1f5f9,
+    rgba(168,85,247,0.05)
+  );
+}
+
+
+/* ===================== */
+/* TYPOGRAPHY */
+/* ===================== */
+
 h1 {
   font-size: 56px;
-  font-weight: 600;
   line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.5px;
   margin-bottom: 24px;
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 36px;
+  line-height: 1.2;
   font-weight: 600;
+  letter-spacing: -0.3px;
   margin-bottom: 16px;
 }
 
 h3 {
   font-size: 20px;
   font-weight: 600;
+  color: var(--text);
 }
 
 p {
   font-size: 18px;
+  line-height: 1.7;
   color: var(--muted);
 }
 
 .section-sub {
   margin-top: 12px;
-  color: var(--text);
+  max-width: 600px;
 }
 
+.highlight {
+  color: var(--primary);
+}
+
+.section-line {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-hover));
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+
+/* ===================== */
+/* BUTTONS */
+/* ===================== */
+
 .btn-primary {
-  background: var(--primary);
+  background: linear-gradient(135deg, #a855f7, #9333ea);
   color: white;
   border: none;
   padding: 14px 28px;
@@ -77,7 +133,7 @@ p {
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
+  background: linear-gradient(135deg, #9333ea, #7e22ce);
 }
 
 .btn-secondary {
@@ -87,6 +143,7 @@ p {
   border-radius: 999px;
   cursor: pointer;
   transition: 0.2s;
+  color: var(--text);
 }
 
 .btn-secondary:hover {
@@ -94,29 +151,29 @@ p {
   color: var(--primary);
 }
 
+
+/* ===================== */
 /* NAVBAR */
+/* ===================== */
 
 nav {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(30, 41, 59, 0.85);
   backdrop-filter: blur(12px);
-  overflow: hidden;
 }
 
 nav::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: 0;
   width: 100%;
   height: 3px;
   background: linear-gradient(
     to bottom,
-    #a855f7 0%,
-    #a855f7 50%,
-    rgba(168, 85, 247, 0.3) 100%
+    #a855f7,
+    rgba(168,85,247,0.3)
   );
 }
 
@@ -130,68 +187,61 @@ nav::after {
 .nav-logo {
   font-size: 26px;
   font-weight: 800;
-  color: #a855f7;
-  cursor: pointer;
+  color: var(--primary);
 }
 
 .nav-actions {
   display: flex;
   gap: 16px;
-  align-items: center;
 }
 
 .nav-link {
   padding: 10px 18px;
   border-radius: 999px;
-  background: #a855f7;
+  background: linear-gradient(135deg, #a855f7, #9333ea);
   color: white;
-  text-decoration: none;
   font-size: 14px;
 }
 
 .nav-cta {
   padding: 10px 18px;
   border-radius: 999px;
-  background: transparent;
-  color: white;
   border: 1px solid rgba(255,255,255,0.3);
+  color: white;
 }
 
+
+/* ===================== */
 /* FOOTER */
+/* ===================== */
 
 .footer {
-  position: relative;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(30, 41, 59, 0.85);
   backdrop-filter: blur(12px);
   margin-top: 80px;
 }
 
 .footer::before {
   content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
+  display: block;
   height: 3px;
   background: linear-gradient(
     to bottom,
-    #a855f7 0%,
-    #a855f7 50%,
-    rgba(168, 85, 247, 0.3) 100%
+    #a855f7,
+    rgba(168,85,247,0.3)
   );
 }
 
 .footer-inner {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 24px 0;
 }
 
 .footer-logo {
   font-size: 22px;
   font-weight: 700;
-  color: #a855f7;
+  color: var(--primary);
 }
 
 .footer-links {
@@ -201,27 +251,9 @@ nav::after {
 
 .footer-links a {
   color: rgba(255,255,255,0.7);
-  text-decoration: none;
   font-size: 14px;
-  transition: 0.2s;
 }
 
 .footer-links a:hover {
-  color: #a855f7;
-}
-
-/* HERO BASE */
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 64px;
-  align-items: center;
-}
-
-.hero-card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
+  color: var(--primary);
 }

@@ -1,11 +1,14 @@
 function SolutionSection() {
   return (
-    <section className="section section-alt">
+    <section className="section">
       <div className="container">
 
         <div className="content">
+
+          <div className="section-line"></div>
+
           <h2>
-            CoreStack cambia l’ordine della valutazione.
+            CoreStack cambia l’ordine della <span className="highlight">valutazione</span>.
           </h2>
 
           <p className="section-sub">
@@ -13,9 +16,22 @@ function SolutionSection() {
           </p>
 
           <div className="solution-text">
-            <p>Il processo parte dalle competenze, non dal profilo.</p>
-            <p>Tutti i candidati vengono valutati con lo stesso criterio.</p>
-            <p>Solo dopo la valutazione, il profilo diventa visibile.</p>
+
+            <p>
+              <span className="solution-dot"></span>
+              <span className="highlight">Il processo parte dalle competenze</span>, non dal profilo.
+            </p>
+
+            <p>
+              <span className="solution-dot"></span>
+              Tutti i candidati vengono valutati con lo stesso criterio.
+            </p>
+
+            <p>
+              <span className="solution-dot"></span>
+              Solo dopo la valutazione, il profilo diventa visibile.
+            </p>
+
           </div>
         </div>
 

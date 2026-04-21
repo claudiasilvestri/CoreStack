@@ -26,7 +26,7 @@ function Hero() {
                 VALUTAZIONE TECNICA
               </span>
 
-              <h3>Profilo anonimo</h3>
+              <h3>Frontend Challenge</h3>
 
               <div className="hero-tasks">
                 <p>✓ Codice</p>

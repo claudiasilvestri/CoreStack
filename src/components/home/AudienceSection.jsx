@@ -1,10 +1,14 @@
 function AudienceSection() {
   return (
-    <section className="section">
+    <section className="section section-alt">
       <div className="container">
 
         <div className="content">
-          <h2>Stesso punto di partenza, per tutti.</h2>
+          <div className="section-line"></div>
+
+          <h2>
+            Stesso punto di partenza, <span className="highlight">per tutti</span>.
+          </h2>
 
           <p className="section-sub">
             Ogni candidato viene valutato sul lavoro reale, prima che il profilo entri in gioco.
@@ -14,6 +18,7 @@ function AudienceSection() {
         <div className="audience-grid">
 
           <div className="audience-column">
+          
             <h3>Per le aziende</h3>
 
             <ul>
@@ -24,6 +29,7 @@ function AudienceSection() {
           </div>
 
           <div className="audience-column">
+          
             <h3>Per i developer</h3>
 
             <ul>

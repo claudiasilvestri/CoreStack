@@ -23,6 +23,8 @@
   --primary-hover: #9333ea;
 
   --primary-soft: rgba(168,85,247,0.06);
+  --primary-soft-2: rgba(168,85,247,0.12);
+
   --card: #ffffff;
 
   --radius: 16px;
@@ -34,11 +36,7 @@
 /* ===================== */
 
 body {
-  background: linear-gradient(
-    180deg,
-    #F8FAFC 0%,
-    #EEF2FF 100%
-  );
+  background: linear-gradient(180deg, #F8FAFC 0%, #EEF2FF 100%);
   color: var(--text);
   font-family: 'Space Grotesk', sans-serif;
   line-height: 1.6;
@@ -56,14 +54,22 @@ body {
 }
 
 .section {
-  padding: 100px 0;
+  padding: 110px 0;
+}
+
+.section-soft {
+  background: linear-gradient(
+    180deg,
+    #f8fafc,
+    rgba(168,85,247,0.04)
+  );
 }
 
 .section-alt {
   background: linear-gradient(
     180deg,
     #f1f5f9,
-    rgba(168,85,247,0.05)
+    rgba(168,85,247,0.08)
   );
 }
 
@@ -114,7 +120,7 @@ p {
   height: 3px;
   background: linear-gradient(90deg, var(--primary), var(--primary-hover));
   border-radius: 999px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 
@@ -129,11 +135,12 @@ p {
   padding: 14px 28px;
   border-radius: 999px;
   cursor: pointer;
-  transition: 0.2s;
+  transition: 0.25s;
 }
 
 .btn-primary:hover {
-  background: linear-gradient(135deg, #9333ea, #7e22ce);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px rgba(168,85,247,0.25);
 }
 
 .btn-secondary {
@@ -152,10 +159,6 @@ p {
 }
 
 
-/* ===================== */
-/* NAVBAR */
-/* ===================== */
-
 nav {
   position: sticky;
   top: 0;
@@ -170,11 +173,7 @@ nav::after {
   bottom: 0;
   width: 100%;
   height: 3px;
-  background: linear-gradient(
-    to bottom,
-    #a855f7,
-    rgba(168,85,247,0.3)
-  );
+  background: linear-gradient(to bottom, #a855f7, rgba(168,85,247,0.3));
 }
 
 .nav-inner {
@@ -206,10 +205,27 @@ nav::after {
 .nav-cta {
   padding: 10px 18px;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: none;
   color: white;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(6px);
+  transition: all 0.25s ease;
 }
 
+.nav-cta:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.nav-actions a,
+.nav-link,
+.nav-cta {
+  text-decoration: none !important;
+}
+
+.nav-actions a::after {
+  display: none !important;
+  content: none !important;
+}
 
 /* ===================== */
 /* FOOTER */
@@ -225,11 +241,7 @@ nav::after {
   content: "";
   display: block;
   height: 3px;
-  background: linear-gradient(
-    to bottom,
-    #a855f7,
-    rgba(168,85,247,0.3)
-  );
+  background: linear-gradient(to bottom, #a855f7, rgba(168,85,247,0.3));
 }
 
 .footer-inner {

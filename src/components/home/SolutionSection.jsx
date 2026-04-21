@@ -1,6 +1,6 @@
 function SolutionSection() {
   return (
-    <section className="section">
+    <section className="section section-alt">
       <div className="container">
 
         <div className="content">

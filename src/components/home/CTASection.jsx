@@ -6,7 +6,7 @@ function CTASection() {
   const { user, role } = useAuth();
 
   return (
-    <section className="section">
+    <section className="section section-alt">
       <div className="container">
 
         <div className="content cta-box">

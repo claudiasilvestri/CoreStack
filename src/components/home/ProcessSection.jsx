@@ -1,6 +1,6 @@
 function ProcessSection() {
   return (
-    <section className="section">
+    <section className="section section-soft">
       <div className="container">
 
         <div className="content">

@@ -1,6 +1,6 @@
 function AudienceSection() {
   return (
-    <section className="section section-alt">
+    <section className="section section-soft">
       <div className="container">
 
         <div className="content">
@@ -18,7 +18,6 @@ function AudienceSection() {
         <div className="audience-grid">
 
           <div className="audience-column">
-          
             <h3>Per le aziende</h3>
 
             <ul>
@@ -29,7 +28,6 @@ function AudienceSection() {
           </div>
 
           <div className="audience-column">
-          
             <h3>Per i developer</h3>
 
             <ul>

@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="section hero">
+    <section className="section section-hero hero">
       <div className="container">
 
         <div className="hero-grid">
